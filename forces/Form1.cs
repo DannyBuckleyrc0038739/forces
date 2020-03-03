@@ -44,8 +44,13 @@ namespace forces
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            double Force, Angle;
             //Parse is just reading textbox as number
-            double Force = double.Parse(textBox2.Text);
+            try
+            {
+                double Force = double.Parse(textBox2.Text);
+            }
+            catch 
             double Angle = double.Parse(textBox1.Text);
 
             //calculate Fx and Fy
