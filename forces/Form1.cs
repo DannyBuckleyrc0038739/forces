@@ -48,10 +48,23 @@ namespace forces
             //Parse is just reading textbox as number
             try
             {
-                double Force = double.Parse(textBox2.Text);
+                Force = double.Parse(textBox1.Text);
             }
-            catch 
-            double Angle = double.Parse(textBox1.Text);
+            catch
+            {
+                MessageBox.Show("Type a numbe no letters por favor");
+                Force = 0.0;
+            }
+
+            try
+            {
+                Angle = double.Parse(textBox1.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Type a number in angle box por favor");
+                Angle = 0.0;
+            }
 
             //calculate Fx and Fy
             double Fx = Force * cos(Angle);
